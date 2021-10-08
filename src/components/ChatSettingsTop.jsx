@@ -6,7 +6,7 @@ const ChatSettingsTop = (props) => {
         window.location.reload();
     }
     
-    const {creds, chats} = props;
+    const {chats} = props;
     return (
         <div align="center">
             <div className="settings-title">

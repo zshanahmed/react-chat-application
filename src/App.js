@@ -15,7 +15,7 @@ const App = () => {
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}
       renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
-      renderChatSettingsTop={(creds, chats) => <ChatSettingsTop creds={creds} chats={chats} />}
+      renderChatSettingsTop={(creds, chats) => <ChatSettingsTop chats={chats} />}
     />
   );
 };
