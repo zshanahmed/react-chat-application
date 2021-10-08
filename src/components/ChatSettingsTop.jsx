@@ -7,6 +7,7 @@ const ChatSettingsTop = (props) => {
     }
     
     const {chats} = props;
+    if (!chats) return <div/>
     return (
         <div align="center">
             <div className="settings-title">
