@@ -29,7 +29,8 @@ const SignupForm = () => {
     axios(config)
       .then(function (response) {
         console.log(response);
-        // window.location.href="/login";
+      }).catch((error) => {
+        setError(error.response.data.message);
       })
   };
 
@@ -45,18 +46,10 @@ const SignupForm = () => {
     <div className="wrapper">
       <div className="form">
         <h1 className="title">Signup</h1>
-        <h4 align="center" style={{ color: "#FFF", marginBottom: "6px" }}>
+        <h4 align="center" className="error">
           {error}
         </h4>
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="input"
-            placeholder="Username"
-            required
-          />
           <input
             type="text"
             value={firstName}
@@ -70,6 +63,14 @@ const SignupForm = () => {
             onChange={(e) => setLastName(e.target.value)}
             className="input"
             placeholder="Last Name"
+          />
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="input"
+            placeholder="Username"
+            required
           />
           <input
             type="password"
