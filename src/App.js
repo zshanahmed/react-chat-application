@@ -2,8 +2,9 @@ import { ChatEngine } from "react-chat-engine";
 import ChatFeed from "./components/ChatFeed";
 import LoginForm from "./components/LoginForm";
 import ChatSettingsTop from "./components/ChatSettingsTop";
-
 import "./App.css";
+
+require("dotenv").config();
 
 const App = () => {
 
