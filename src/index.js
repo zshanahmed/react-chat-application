@@ -7,8 +7,8 @@ import SignupForm from "./components/SignupForm";
 ReactDOM.render(
     <Router>
         <Switch>
-            <Route path="/login" render={() => <App/>}/>
-            <Route path="/signup" render={()=> <SignupForm/>}/>
+            <Route exact path="/login" render={() => <App/>}/>
+            <Route exact path="/signup" render={()=> <SignupForm/>}/>
             <Redirect from="/" to="/login"/>
         </Switch>
     </Router>,

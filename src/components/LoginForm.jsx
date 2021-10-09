@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router-dom";
 import axios from "axios";
 
 const LoginForm = () => {
@@ -37,7 +38,7 @@ const LoginForm = () => {
                         <button type="submit" className="button">
                             <span>Start Chatting</span>
                         </button>
-                        <span style={{color: "#FFF"}}>Don't have an account? <a href="/signup">Signup</a> </span>
+                        <span style={{color: "#FFF"}}>Don't have an account? <Link className="link" to="/signup">Signup</Link> </span>
                     </div>
                     <h2 className="error">{error}</h2>
                 </form>

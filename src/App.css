@@ -272,7 +272,7 @@
     width: 200px;
     transition: all 0.4s;
     cursor: pointer;
-    margin: 5px;
+    margin-bottom: 1rem;
     width: 90%;
   }
   .button span {
@@ -329,4 +329,17 @@
   .logout-button:hover {
     background-color: #b92a2a;
     color: #FFF;
+  }
+
+  .link {
+    background-color: #694b91;
+    text-decoration: none;
+    color: #FFF;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    transition: 350ms;
+  }
+
+  .link:hover{
+    background-color: #46325f;
   }

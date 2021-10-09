@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 import axios from "axios";
 
 const SignupForm = () => {
@@ -27,11 +28,9 @@ const SignupForm = () => {
 
     axios(config)
       .then(function (response) {
-        console.log(response.data);
+        console.log(response);
+        // window.location.href="/login";
       })
-      .catch(function (error) {
-        console.log(error);
-      });
   };
 
   useEffect(() => {
@@ -64,7 +63,6 @@ const SignupForm = () => {
             onChange={(e) => setFirstName(e.target.value)}
             className="input"
             placeholder="First Name"
-            required
           />
           <input
             type="text"
@@ -72,7 +70,6 @@ const SignupForm = () => {
             onChange={(e) => setLastName(e.target.value)}
             className="input"
             placeholder="Last Name"
-            required
           />
           <input
             type="password"
@@ -95,7 +92,7 @@ const SignupForm = () => {
               <span>Signup</span>
             </button>
             <span style={{ color: "#FFF" }}>
-              Already have an account? <a href="/login">Login</a>{" "}
+              Already have an account? <Link className="link" to="/login">Login</Link>
             </span>
           </div>
         </form>
