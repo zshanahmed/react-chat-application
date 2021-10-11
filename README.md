@@ -1,4 +1,5 @@
 # Chat HQ
+[![Netlify Status](https://api.netlify.com/api/v1/badges/42e8fa2d-3c0d-4048-924c-916cabb7fb87/deploy-status)](https://app.netlify.com/sites/chathq/deploys)
 
 Chat application using chatengine.io SDK and react components and hooks
 
